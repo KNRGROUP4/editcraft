@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>EditCraft | India’s Most Elite Video Editing Marketplace</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#d4af35",
+              "background-light": "#f8f7f6",
+              "background-dark": "#201d12",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 17px;
+      }
+
+      .gold-gradient {
+        background: linear-gradient(135deg, #d4af35 0%, #f2d06b 50%, #d4af35 100%);
+      }
+
+      .text-gold-gradient {
+        background: linear-gradient(135deg, #b8860b 0%, #d4af35 50%, #b8860b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .glass-nav {
+        background: rgba(248, 247, 246, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(212, 175, 53, 0.1);
+      }
+
+      .nav-scroll {
+        transition: transform 0.25s ease, box-shadow 0.2s ease;
+      }
+
+      .nav-hidden {
+        transform: translateY(-100%);
+      }
+
+      .hero-parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .faq-content {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-4px);
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+      }
+
+      details[open] .faq-content {
+        max-height: 260px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-scroll {
+        transition: transform 0.25s ease, box-shadow 0.2s ease;
+      }
+
+      .nav-hidden {
+        transform: translateY(-100%);
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      @media (max-width: 640px) {
+        .hero-parallax {
+          background-attachment: scroll;
+        }
+        html {
+          font-size: 16px;
+        }
+      }
+
+      .cta-wave {
+        background-color: #ffffff;
+        background-image: radial-gradient(1200px 220px at 70% 50%, rgba(0, 0, 0, 0.04) 0%, rgba(255, 255, 255, 0) 70%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='240' viewBox='0 0 1440 240'%3E%3Cpath d='M0 160 Q 360 100 720 150 T 1440 140' fill='none' stroke='%23e8edf4' stroke-width='1'/%3E%3Cpath d='M0 180 Q 360 120 720 170 T 1440 160' fill='none' stroke='%23eef3f8' stroke-width='1'/%3E%3Cpath d='M0 200 Q 360 140 720 190 T 1440 180' fill='none' stroke='%23f4f7fb' stroke-width='1'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 1440px 240px, cover;
+      }
+
+      @media (max-width: 768px) {
+        .cta-wave {
+          background-image: radial-gradient(900px 200px at 80% 50%, rgba(0, 0, 0, 0.04) 0%, rgba(255, 255, 255, 0) 70%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024' height='220' viewBox='0 0 1024 220'%3E%3Cpath d='M0 150 Q 256 96 512 140 T 1024 130' fill='none' stroke='%23e8edf4' stroke-width='1'/%3E%3Cpath d='M0 168 Q 256 112 512 158 T 1024 148' fill='none' stroke='%23eef3f8' stroke-width='1'/%3E%3Cpath d='M0 188 Q 256 132 512 176 T 1024 166' fill='none' stroke='%23f4f7fb' stroke-width='1'/%3E%3C/svg%3E");
+          background-size: 1024px 220px, cover;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-display bg-background-light text-slate-900 selection:bg-primary/30">
+    <nav class="fixed top-0 w-full z-50 glass-nav nav-scroll">
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="h-10 w-10 bg-gradient-to-br from-primary to-amber-300 flex items-center justify-center rounded-2xl shadow-lg shadow-primary/30"
+          >
+            <span class="material-symbols-outlined text-background-light text-2xl">
+              play_circle
+            </span>
+          </div>
+          <span
+            class="hidden sm:inline-block text-xl font-extrabold tracking-tight text-slate-900"
+          >
+            EditCraft
+          </span>
+        </div>
+        <div
+          class="hidden md:flex items-center gap-2 px-2 py-1 rounded-full bg-white/70 border border-white/80 shadow-sm shadow-primary/10 backdrop-blur"
+        >
+          <a
+            href="#services"
+            class="group flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 hover:bg-slate-900 hover:text-amber-100 transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-primary group-hover:text-amber-200"
+            >
+              design_services
+            </span>
+            <span>Services</span>
+          </a>
+          <a
+            href="#pricing"
+            class="group flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 hover:bg-slate-900 hover:text-amber-100 transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-primary group-hover:text-amber-200"
+            >
+              payments
+            </span>
+            <span>Pricing</span>
+          </a>
+          <a
+            href="#addons"
+            class="group flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 hover:bg-slate-900 hover:text-amber-100 transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-primary group-hover:text-amber-200"
+            >
+              add_circle
+            </span>
+            <span>Add-ons</span>
+          </a>
+          <a
+            href="#faq"
+            class="group flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 hover:bg-slate-900 hover:text-amber-100 transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-sm text-primary group-hover:text-amber-200"
+            >
+              help
+            </span>
+            <span>FAQ</span>
+          </a>
+        </div>
+        <button
+          id="bookCallCta"
+          class="inline-flex items-center gap-2 gold-gradient text-slate-900 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.22em] hover:shadow-xl hover:shadow-primary/30 transition-all active:scale-95"
+          type="button"
+        >
+          <span>Book a Call</span>
+          <span class="material-symbols-outlined text-sm"> event </span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <section
+        class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 z-0 hero-parallax"
+          style="
+            background-image: linear-gradient(
+                rgba(248, 247, 246, 0.88),
+                rgba(248, 247, 246, 0.9)
+              ),
+              url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM_IBcemTrEop3pvMR9MIGq21xy1GGJZ2KrO2uzMtsMAPdNaZILX9WG80jWIKd07OvTNZHp1zZBOKix51kX3gRc5O7wMmOmdaeSm3PBsrrgkvC2BYJiYbRKDchjCvkIMdfs3GCIeDoo1653xwjLs-25wWue_Aq1f-DsN_ycf5IedQYVDTXxojE-QsX2y0vwp3EXabErf6-PSoNKi2mMBbMQk39jd1MFTlDJ7N7bY0QR_MJbbdZr1fc8dLDiiz5ZgJfi1fFsVSqWgQ');
+          "
+        ></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-8"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            India’s premiere marketplace
+          </div>
+          <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 leading-[1.1] tracking-tight mb-8"
+          >
+            India’s Most Elite
+            <br />
+            <span class="text-gold-gradient">Video Editing</span> Marketplace
+          </h1>
+          <p
+            class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-10"
+          >
+            Professional quality redefined with 24–48 hour turnaround.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              id="bookCallHero"
+              type="button"
+              class="w-full sm:w-auto bg-slate-900 text-amber-100 px-10 py-5 rounded-xl text-lg font-bold hover:bg-slate-800 transition-all"
+            >
+              Book a Call
+            </button>
+          </div>
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm text-slate-600"
+          >
+            <div class="flex items-center justify-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary"
+              >
+                <span class="material-symbols-outlined text-base">schedule</span>
+              </span>
+              <span class="inline-block pb-1"><span class="font-semibold">24–48 hr</span> turnaround per video</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary"
+              >
+                <span class="material-symbols-outlined text-base">workspace_premium</span>
+              </span>
+              <span class="inline-block pb-1">Managed editors, QC on every order</span>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+              <span
+                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary"
+              >
+                <span class="material-symbols-outlined text-base">credit_card</span>
+              </span>
+              <span class="inline-block pb-1">Simple plans from ₹299 with clear scopes</span>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <span class="material-symbols-outlined text-primary/50 text-3xl">
+            keyboard_double_arrow_down
+          </span>
+        </div>
+      </section>
+      <!-- FAQ section moved below Quality & Operations -->
+      <section class="py-12 cta-wave">
+        <div
+          class="w-full px-6 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6"
+        >
+          <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 md:flex-1 text-center md:text-left">
+            Choose EditCraft for a well-guided editing purchase
+          </h3>
+          <div class="flex items-center gap-3 flex-col sm:flex-row w-full md:w-auto md:shrink-0 justify-center md:justify-end">
+            <button
+              id="bookCallInline"
+              type="button"
+              class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow w-full sm:w-auto"
+            >
+              <span class="whitespace-nowrap">Book a free call now</span>
+              <span class="material-symbols-outlined text-base">event</span>
+            </button>
+            <a
+              href="https://wa.me/0000000000"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 px-6 py-3 rounded-xl font-semibold hover:bg-emerald-100 w-full sm:w-auto"
+              rel="noreferrer"
+            >
+              <span class="whitespace-nowrap">Chat with us on WhatsApp</span>
+              <span class="material-symbols-outlined text-base">chat</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-white" id="services">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-start justify-between gap-10 mb-14"
+          >
+            <div class="max-w-2xl">
+              <h2
+                class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight"
+              >
+                Tailored for the
+                <span class="italic font-semibold text-slate-700">
+                  Industry Elite
+                </span>
+              </h2>
+            </div>
+            <p class="max-w-md text-sm md:text-base text-slate-600">
+              Expertly crafted edits for creators and professionals who demand nothing
+              less than absolute excellence from every single video they publish.
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-4">
+            <div
+              class="rounded-[2rem] border border-slate-100 bg-slate-50 p-6 md:p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-md shadow-slate-200/80"
+              >
+                <span class="material-symbols-outlined text-primary text-xl">
+                  slideshow
+                </span>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                  Reel Creators
+                </h3>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  High-impact short-form content designed to stop the scroll and go
+                  viral.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[2rem] border border-slate-100 bg-slate-50 p-6 md:p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-md shadow-slate-200/80"
+              >
+                <span class="material-symbols-outlined text-primary text-xl">
+                  smart_display
+                </span>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-1">YouTubers</h3>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Polished long-form storytelling with retention-focused editing
+                  strategies.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[2rem] border border-slate-100 bg-slate-50 p-6 md:p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-md shadow-slate-200/80"
+              >
+                <span class="material-symbols-outlined text-primary text-xl">
+                  view_kanban
+                </span>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-1">Agencies</h3>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Scalable white-label editing partnerships to boost your agency’s
+                  output.
+                </p>
+              </div>
+            </div>
+            <div
+              class="rounded-[2rem] border border-slate-100 bg-slate-50 p-6 md:p-7 flex flex-col gap-4 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10 transition-all"
+            >
+              <div
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white shadow-md shadow-slate-200/80"
+              >
+                <span class="material-symbols-outlined text-primary text-xl">
+                  apartment
+                </span>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                  Real Estate Agents
+                </h3>
+                <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Luxury property showcases that capture cinematic scale and premium
+                  detail.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-24 bg-background-light" id="pricing">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-14">
+            <p
+              class="text-xs font-semibold tracking-[0.3em] uppercase text-primary mb-3"
+            >
+              Plans
+            </p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">
+              Choose Your Tier of Excellence
+            </h2>
+          </div>
+
+          <div
+            class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 items-stretch max-w-6xl mx-auto"
+          >
+            <div
+              class="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm"
+            >
+              <div class="mb-4">
+                <p
+                  class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-500"
+                >
+                  Basic
+                </p>
+              </div>
+              <div class="mb-1">
+                <span class="text-3xl font-extrabold tracking-tight">₹299</span>
+                <span class="text-[11px] text-slate-500 ml-1">/ project</span>
+              </div>
+              <p class="text-sm text-slate-500 mb-4">
+                Up to 60s duration · 24h delivery
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 flex-1">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Professional basic cuts and clean pacing</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Curated background music</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Simple captions and call-outs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>1 text-only revision within scope</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 w-full rounded-full border border-slate-300 bg-white py-2.5 text-xs font-semibold uppercase tracking-[0.2em] hover:border-primary hover:text-primary transition-colors"
+              >
+                Book Now
+              </button>
+            </div>
+
+            <div
+              class="relative flex flex-col rounded-3xl border border-primary bg-white p-6 md:p-8 shadow-xl shadow-primary/20"
+            >
+              <div
+                class="absolute -top-4 left-1/2 -translate-x-1/2 inline-flex items-center rounded-full bg-primary text-[10px] font-bold uppercase tracking-[0.25em] text-slate-900 px-4 py-1 shadow-md shadow-primary/40"
+              >
+                Most Popular
+              </div>
+              <div class="mb-4 pt-2">
+                <p
+                  class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-500"
+                >
+                  Pro
+                </p>
+              </div>
+              <div class="mb-1">
+                <span class="text-3xl font-extrabold tracking-tight">₹699</span>
+                <span class="text-[11px] text-slate-500 ml-1">/ project</span>
+              </div>
+              <p class="text-sm text-slate-500 mb-4">
+                Up to 120s duration · 24h priority delivery
+              </p>
+              <ul class="space-y-2 text-sm text-slate-700 flex-1">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Advanced dynamic cuts for hooks and retention</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Custom dynamic captions and SFX</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Seamless transitions and cinema-grade color correction</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>2 text-only revisions within scope</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 w-full rounded-full gold-gradient py-2.5 text-xs font-black uppercase tracking-[0.2em] text-slate-900 hover:shadow-2xl hover:shadow-primary/40 transition-all"
+              >
+                Book Now
+              </button>
+            </div>
+
+            <div
+              class="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm"
+            >
+              <div class="mb-4 flex items-center justify-between">
+                <p
+                  class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-500"
+                >
+                  Elite
+                </p>
+                <span
+                  class="text-[10px] font-semibold tracking-widest uppercase bg-slate-900 text-amber-200 px-2 py-1 rounded-full"
+                >
+                  Priority
+                </span>
+              </div>
+              <div class="mb-1">
+                <span class="text-3xl font-extrabold tracking-tight">₹1,999</span>
+                <span class="text-[11px] text-slate-500 ml-1">/ project</span>
+              </div>
+              <p class="text-sm text-slate-500 mb-4">
+                Up to 5 minutes duration · 24h executive priority
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 flex-1">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Full story-based edit with narrative structure</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Custom motion graphics and branded elements</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Perfect for ads, launches and flagship campaigns</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Executive 24h support and 3 revisions</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 w-full rounded-full border border-slate-900 bg-slate-900 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-100 hover:bg-black transition-colors"
+              >
+                Book Now
+              </button>
+            </div>
+            <div
+              class="flex flex-col rounded-3xl border border-slate-200 bg-white p-6 md:p-8 shadow-sm"
+            >
+              <div class="mb-4">
+                <p
+                  class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-500"
+                >
+                  For Business & Brands
+                </p>
+              </div>
+              <div class="mb-1">
+                <span class="text-2xl font-extrabold tracking-tight">Customised Pricing</span>
+              </div>
+              <div class="text-[11px] text-slate-500 mb-2">+ GST</div>
+              <p class="text-sm text-slate-500 mb-4">
+                Tailored scopes, SLAs and volume-friendly terms for teams.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 flex-1">
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Account management and onboarding</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Bulk orders, approvals and SLAs</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="material-symbols-outlined text-primary text-sm">
+                    check_circle
+                  </span>
+                  <span>Brand-safe templates and QA</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 w-full rounded-full border border-slate-300 bg-white py-2.5 text-xs font-semibold uppercase tracking-[0.2em] hover:border-primary hover:text-primary transition-colors"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-white" id="addons">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10"
+          >
+            <div class="max-w-2xl">
+              <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-3">
+                Add-ons
+              </h2>
+              <p class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight">
+                Fine-tune each order with powerful, optional upgrades.
+              </p>
+            </div>
+            <p class="max-w-xl text-sm md:text-base text-slate-600">
+              Keep scopes tight by default and only add extra speed, revisions or file
+              access when a project truly needs it.
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-4">
+            <div
+              class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 flex flex-col gap-2"
+            >
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary mb-1"
+              >
+                <span class="material-symbols-outlined text-base">bolt</span>
+              </span>
+              <h3 class="text-sm font-semibold text-slate-900">Express 6-hour delivery</h3>
+              <p class="text-xs text-slate-600">
+                Skip the queue for urgent campaigns and last-minute launches.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 flex flex-col gap-2"
+            >
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary mb-1"
+              >
+                <span class="material-symbols-outlined text-base">edit</span>
+              </span>
+              <h3 class="text-sm font-semibold text-slate-900">Extra revision</h3>
+              <p class="text-xs text-slate-600">
+                Go beyond the built-in revision limit for special high-stakes videos.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 flex flex-col gap-2"
+            >
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary mb-1"
+              >
+                <span class="material-symbols-outlined text-base">folder_open</span>
+              </span>
+              <h3 class="text-sm font-semibold text-slate-900">Raw project file</h3>
+              <p class="text-xs text-slate-600">
+                Receive the full project file for future tweaks with your own team.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl border border-slate-200 bg-slate-50/70 p-5 flex flex-col gap-2"
+            >
+              <span
+                class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary mb-1"
+              >
+                <span class="material-symbols-outlined text-base">translate</span>
+              </span>
+              <h3 class="text-sm font-semibold text-slate-900">
+                Multi-language subtitles
+              </h3>
+              <p class="text-xs text-slate-600">
+                Reach regional and international audiences with accurate subtitles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-24 bg-background-light">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-8 items-stretch">
+          <div class="md:col-span-4">
+            <div class="sticky top-0 md:-mt-24 md:-ml-6 md:-ml-[calc((100vw-100%)/2)] md:w-[calc(100%+((100vw-100%)/2))]">
+              <div class="relative h-[100svh] md:h-[100vh] rounded-none overflow-hidden bg-gradient-to-br from-primary/10 via-amber-50 to-white">
+                <img
+                  alt="Editor at RGB-lit dual-monitor setup"
+                  src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=1400&h=1600&fit=crop&auto=format&q=80"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute top-0 left-0 right-0 p-3 md:p-4">
+                  <p class="inline-block text-[10px] font-semibold tracking-[0.3em] uppercase text-slate-900 bg-white/80 backdrop-blur px-3 py-1 rounded-full mb-2">The EditCraft Experience</p>
+                  <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Guided, end‑to‑end editing</h3>
+                </div>
+                <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white to-transparent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-8 space-y-12">
+            <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] items-start gap-6 pb-10 border-b border-slate-200">
+              <div class="h-8 w-12 rounded-full bg-amber-100 text-amber-700 text-xs font-bold tracking-[0.25em] flex items-center justify-center">01</div>
+              <div>
+                <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">Get Expert Guidance</h4>
+                <p class="text-slate-600 text-sm md:text-base max-w-xl">Talk to an EditCraft specialist to scope your video, timelines and add‑ons. No push, no spam.</p>
+                <div class="flex flex-wrap items-center gap-3 mt-4">
+                  <button id="bookCallCta" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow">
+                    <span>Book a free call now</span>
+                    <span class="material-symbols-outlined text-base">event</span>
+                  </button>
+                  <a href="https://wa.me/0000000000" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-emerald-100">
+                    <span>Chat on WhatsApp</span>
+                    <span class="material-symbols-outlined text-base">chat</span>
+                  </a>
+                </div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">schedule</span><span>10‑min consultation</span></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-base">verified</span><span>Zero cost</span></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-rose-500 text-base">block</span><span>Zero spam</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] items-start gap-6 py-10 border-b border-slate-200">
+              <div class="h-8 w-12 rounded-full bg-amber-100 text-amber-700 text-xs font-bold tracking-[0.25em] flex items-center justify-center">02</div>
+              <div>
+                <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">End‑to‑End Assistance</h4>
+                <p class="text-slate-600 text-sm md:text-base max-w-xl">From intake to delivery, our team guides every step so you can focus on content, not coordination.</p>
+                <div class="flex flex-wrap items-center gap-3 mt-4">
+                  <button class="inline-flex items-center gap-2 rounded-xl bg-amber-100 text-slate-900 px-5 py-2.5 text-sm font-semibold ring-1 ring-amber-200 hover:bg-amber-200/70">
+                    <span>Understand Your Scope</span>
+                    <span class="material-symbols-outlined text-base">favorite</span>
+                  </button>
+                  <button class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-primary hover:text-primary">
+                    <span>Compare Plans</span>
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+                <ul class="space-y-2">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span><span>Clear briefs and checklists</span></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span><span>Plan‑aligned deliverables</span></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span><span>On‑platform messaging</span></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span><span>Admin‑assigned editors</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr_1fr] items-start gap-6 pt-6 pb-10">
+              <div class="h-8 w-12 rounded-full bg-amber-100 text-amber-700 text-xs font-bold tracking-[0.25em] flex items-center justify-center">03</div>
+              <div class="lg:col-start-2">
+                <h4 class="text-xl md:text-2xl font-bold text-slate-900 mb-2">QC and Delivery Support</h4>
+                <p class="text-slate-600 text-sm md:text-base max-w-xl">Every order goes through internal review before handover. Revisions are tracked with full history.</p>
+                <div class="flex flex-wrap items-center gap-3 mt-4">
+                  <button class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-primary hover:text-primary">
+                    <span>Register a Revision</span>
+                    <span class="material-symbols-outlined text-base">edit</span>
+                  </button>
+                </div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700 lg:col-start-3 lg:justify-self-end w-full max-w-xs">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-amber-500">format_quote</span>
+                  <p class="leading-relaxed">Consistent output every time. The review layer keeps quality high and timelines predictable.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quality & Operations section moved below, just above the footer -->
+
+      <section class="py-24 bg-white" id="comparison">
+        <div class="max-w-6xl mx-auto px-6 md:px-10">
+          <div
+            class="grid grid-cols-12 gap-6 md:gap-8 items-center pb-0 md:pb-12 border-b border-slate-100 sticky top-16 md:top-0 bg-white/95 backdrop-blur supports-[backdrop-filter]:backdrop-blur z-20"
+          >
+            <div class="col-span-12 md:col-span-4 pt-0 md:pt-6">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-0 mb-2">
+                Video Editing Experience
+              </h2>
+              <p class="text-slate-500 text-sm md:text-base max-w-md">
+                What creators experience throughout their editing journey with EditCraft
+                versus other platforms.
+              </p>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 flex flex-col items-center gap-2"
+            >
+              <span class="font-semibold text-slate-900 text-sm md:text-base">
+                EditCraft
+              </span>
+              <div class="flex -space-x-2">
+                <img
+                  alt="EditCraft avatar 1"
+                  class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                />
+                <img
+                  alt="EditCraft avatar 2"
+                  class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                />
+              </div>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 flex flex-col items-center gap-2"
+            >
+              <span class="font-semibold text-slate-900 text-sm md:text-base">
+                Freelancer Marketplaces
+              </span>
+              <div class="flex items-center gap-2">
+                <img
+                  alt="Freelancer avatar"
+                  class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover grayscale"
+                  src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=100&h=100&fit=crop"
+                />
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold border-2 border-white shadow-sm text-xl"
+                >
+                  ?
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-12 gap-6 md:gap-8 py-12 md:py-16 border-b border-slate-200">
+            <div class="col-span-12 md:col-span-4">
+              <h3 class="text-xl font-bold text-slate-900 mb-3 text-center md:text-left">Shortlisting</h3>
+              <p class="text-slate-400 text-sm leading-relaxed max-w-xs hidden md:block">
+                Identifying an editor that best suits your creative and technical needs.
+              </p>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-slate-200"
+            >
+              <div class="flex gap-3 mb-6 text-base">
+                <span class="material-symbols-outlined text-blue-600">
+                  content_paste_search
+                </span>
+                <span class="material-symbols-outlined text-orange-500">
+                  verified_user
+                </span>
+                <span class="material-symbols-outlined text-emerald-500">
+                  fact_check
+                </span>
+              </div>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-800 font-medium">Vetted + internal QC review</li>
+                <li class="text-slate-800 font-medium">
+                  Every project undergoes multi-layer review
+                </li>
+                <li class="text-slate-800 font-medium">
+                  Editors reviewed & rated by platform
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-slate-50 rounded-3xl p-6 md:p-8 flex flex-col border border-slate-200 shadow-sm"
+            >
+              <span class="material-symbols-outlined text-red-400 mb-6"> close </span>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-600 font-medium">
+                  Minimal or no human guidance
+                </li>
+                <li class="text-slate-600 font-medium">
+                  Very inconsistent quality consistency
+                </li>
+                <li class="text-slate-600 font-medium">
+                  Fake profiles and misleading portfolios
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-12 gap-6 md:gap-8 py-12 md:py-16 border-b border-slate-200">
+            <div class="col-span-12 md:col-span-4">
+              <h3 class="text-xl font-bold text-slate-900 mb-3 text-center md:text-left">
+                Application &amp; Payment
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed max-w-xs hidden md:block">
+                The most critical step – ensuring your transaction is secure and
+                transparent.
+              </p>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-slate-200"
+            >
+              <div class="flex gap-3 mb-6 items-center">
+                <img
+                  alt="Avatar"
+                  class="w-8 h-8 rounded-full shadow-sm object-cover"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                />
+                <span class="material-symbols-outlined text-blue-500"> payments </span>
+                <span class="material-symbols-outlined text-orange-400"> timer </span>
+                <img
+                  alt="Avatar"
+                  class="w-8 h-8 rounded-full shadow-sm object-cover"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                />
+              </div>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-800 font-medium">
+                  Fixed clear plans (₹299, ₹699, ₹1,999)
+                </li>
+                <li class="text-slate-800 font-medium">
+                  SLA-backed 24–48 hours guaranteed delivery
+                </li>
+                <li class="text-slate-800 font-medium">
+                  No hidden costs or negotiation fatigue
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-slate-50 rounded-3xl p-6 md:p-8 flex flex-col border border-slate-200 shadow-sm"
+            >
+              <span class="material-symbols-outlined text-red-400 mb-6"> close </span>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-600 font-medium">
+                  Unclear / negotiation heavy pricing
+                </li>
+                <li class="text-slate-600 font-medium">
+                  Turnaround depends entirely on the editor
+                </li>
+                <li class="text-slate-600 font-medium">
+                  Higher risk of delays and missed deadlines
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-12 gap-6 md:gap-8 py-12 md:py-16">
+            <div class="col-span-12 md:col-span-4">
+              <h3 class="text-xl font-bold text-slate-900 mb-3 text-center md:text-left">
+                Project Management
+              </h3>
+              <p class="text-slate-400 text-sm leading-relaxed max-w-xs hidden md:block">
+                How the platform manages the entire lifecycle of your project.
+              </p>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-white rounded-3xl p-6 md:p-8 shadow-lg border border-slate-200"
+            >
+              <div class="flex gap-3 mb-6 text-base">
+                <span class="material-symbols-outlined text-blue-600"> forum </span>
+                <span class="material-symbols-outlined text-emerald-500">
+                  checklist_rtl
+                </span>
+                <span class="material-symbols-outlined text-orange-500">
+                  support_agent
+                </span>
+              </div>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-800 font-medium">
+                  Centralized in-platform messaging
+                </li>
+                <li class="text-slate-800 font-medium">
+                  SOP-based flow for every single edit
+                </li>
+                <li class="text-slate-800 font-medium">
+                  Managed premium support &amp; refund policy
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-span-6 md:col-span-4 bg-slate-50 rounded-3xl p-6 md:p-8 flex flex-col border border-slate-200 shadow-sm"
+            >
+              <span class="material-symbols-outlined text-red-400 mb-6"> close </span>
+              <ul class="space-y-4 text-sm md:text-base">
+                <li class="text-slate-600 font-medium">
+                  Fragmented (email, WhatsApp, chat)
+                </li>
+                <li class="text-slate-600 font-medium">
+                  No standards; every editor is different
+                </li>
+                <li class="text-slate-600 font-medium">
+                  Limited support and lengthy disputes
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ moved below, just above the footer -->
+
+      <section
+        class="py-24 bg-gradient-to-b from-background-light via-white to-background-light"
+        id="quality"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12"
+          >
+            <div class="max-w-2xl">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/25 text-primary text-[11px] font-semibold uppercase tracking-[0.25em] mb-4"
+              >
+                <span class="material-symbols-outlined text-sm">verified</span>
+                <span>Quality &amp; Operations</span>
+              </div>
+              <p
+                class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight"
+              >
+                A lightweight QC layer and clear rules protect both clients and editors.
+              </p>
+            </div>
+            <p class="max-w-xl text-sm md:text-base text-slate-600">
+              Every delivery is checked by an admin using a quick SOP so common issues
+              are fixed before you ever see the file.
+            </p>
+          </div>
+          <div class="grid gap-8 md:gap-10 md:grid-cols-2">
+            <div
+              class="relative rounded-3xl bg-white/90 ring-1 ring-amber-200/50 backdrop-blur-sm p-6 md:p-8 shadow-lg shadow-primary/20 overflow-hidden group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/30"
+            >
+              <div
+                class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-amber-300 to-primary opacity-90"
+              ></div>
+              <div class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-amber-100/60 blur-2xl"></div>
+              <div class="flex items-center justify-between mb-5">
+                <h3
+                  class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-600"
+                >
+                  QC Checklist
+                </h3>
+                <span
+                  class="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-600"
+                >
+                  <span class="material-symbols-outlined text-sm">shield</span>
+                  Live on every order
+                </span>
+              </div>
+              <ul class="mt-2 space-y-3 text-sm text-slate-800">
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>Video duration matches the selected plan.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>Audio is clean, synced and free from major glitches.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>Captions and on-screen text have no spelling errors.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>No export watermark from editing tools.</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>
+                    Correct aspect ratio for Reels, Shorts or requested platform.
+                  </span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span
+                    class="h-6 w-6 rounded-full bg-emerald-50 border border-emerald-500 text-emerald-700 flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white"
+                  >
+                    ✓
+                  </span>
+                  <span>Export quality at 1080p (or as requested).</span>
+                </li>
+              </ul>
+              <div class="mt-6 pt-4 border-t border-amber-200/50 flex items-center gap-2 text-xs text-slate-600">
+                <span class="material-symbols-outlined text-emerald-600 text-base">verified</span>
+                QA logged by admin before delivery
+              </div>
+            </div>
+            <div
+              class="relative rounded-3xl bg-white/90 ring-1 ring-slate-200 backdrop-blur-sm p-6 md:p-8 shadow-md overflow-hidden group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+            >
+              <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-200 opacity-90"></div>
+              <div class="flex items-center justify-between mb-5">
+                <h3 class="text-[11px] font-semibold tracking-[0.25em] uppercase text-slate-600">
+                  Operations Playbook
+                </h3>
+                <span class="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+                  <span class="material-symbols-outlined text-sm">sprint</span>
+                  Simple & clear
+                </span>
+              </div>
+              <ol class="space-y-4 text-sm text-slate-800">
+                <li class="flex items-start gap-3">
+                  <span class="h-7 w-7 rounded-xl bg-amber-50 text-amber-700 border border-amber-200 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-base">assignment</span>
+                  </span>
+                  <div>
+                    <div class="font-semibold">Intake</div>
+                    <div class="text-slate-600">Requirements and scope set before editing starts.</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="h-7 w-7 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-base">rule</span>
+                  </span>
+                  <div>
+                    <div class="font-semibold">Review</div>
+                    <div class="text-slate-600">Admin checks the output against the QC list.</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="h-7 w-7 rounded-xl bg-blue-50 text-blue-700 border border-blue-200 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-base">outbox</span>
+                  </span>
+                  <div>
+                    <div class="font-semibold">Handover</div>
+                    <div class="text-slate-600">Files delivered and feedback tracked in one place.</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-24 bg-gradient-to-b from-background-light via-white to-background-light"
+        id="faq"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="grid gap-10 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start"
+          >
+            <div class="space-y-6">
+              <div>
+                <h2
+                  class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight"
+                >
+                  Frequently Asked
+                  <span class="text-gold-gradient">Questions</span>
+                </h2>
+                <p class="mt-3 text-sm md:text-base text-slate-600 max-w-sm">
+                  Quick answers to how EditCraft works so you can place your first order
+                  with confidence.
+                </p>
+              </div>
+              <div class="relative mx-auto w-52 h-52 md:w-64 md:h-64 rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/30 ring-1 ring-primary/15">
+                <svg class="absolute inset-0 h-full w-full object-cover" viewBox="0 0 512 512" role="img" aria-label="Video editing illustration" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#fef3c7"/>
+                      <stop offset="1" stop-color="#ffffff"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="0" y="0" width="512" height="512" fill="url(#g1)"/>
+                  <rect x="64" y="90" width="384" height="220" rx="16" fill="#0f172a"/>
+                  <path d="M230 160 L230 240 L310 200 Z" fill="#f59e0b"/>
+                  <rect x="64" y="332" width="384" height="16" rx="8" fill="#0ea5a8" opacity="0.8"/>
+                  <rect x="80" y="360" width="90" height="10" rx="5" fill="#f59e0b"/>
+                  <rect x="182" y="360" width="60" height="10" rx="5" fill="#0ea5a8"/>
+                  <rect x="254" y="360" width="120" height="10" rx="5" fill="#94a3b8"/>
+                  <rect x="386" y="360" width="62" height="10" rx="5" fill="#0ea5a8"/>
+                  <rect x="140" y="384" width="160" height="10" rx="5" fill="#f59e0b" opacity="0.9"/>
+                  <g transform="translate(84,62)">
+                    <rect x="0" y="0" width="140" height="40" rx="6" fill="#334155"/>
+                    <path d="M0 16 L140 16" stroke="#ffffff" stroke-opacity="0.6" stroke-width="6" stroke-dasharray="16 10"/>
+                  </g>
+                  <g transform="translate(350,300) rotate(-25)">
+                    <rect x="-30" y="-18" width="60" height="36" rx="6" fill="#1e293b"/>
+                    <path d="M-30 -4 L30 -4" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+                    <circle cx="-10" cy="8" r="4" fill="#0ea5a8"/>
+                    <circle cx="10" cy="8" r="4" fill="#0ea5a8"/>
+                  </g>
+                </svg>
+                <div class="absolute inset-0 bg-gradient-to-t from-white/70 via-white/10 to-transparent"></div>
+                <div class="pointer-events-none absolute -right-10 -bottom-10 h-36 w-36 rounded-full bg-amber-200/50 blur-2xl"></div>
+                <div class="pointer-events-none absolute -left-10 -top-10 h-28 w-28 rounded-full bg-primary/20 blur-2xl"></div>
+                <div class="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-white/80 backdrop-blur px-2.5 py-1 ring-1 ring-slate-200/60">
+                  <span class="material-symbols-outlined text-primary text-base">help</span>
+                  <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-700">FAQ</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <details
+                class="group border-b border-slate-200 py-3 hover:bg-white/70 hover:-mx-4 hover:px-4 open:bg-white open:rounded-2xl open:shadow-lg open:px-4 open:-mx-4 open:border-primary/30 open:ring-1 open:ring-primary/20 transition-all"
+                open
+              >
+                <summary
+                  class="flex items-center justify-between cursor-pointer text-sm md:text-base font-semibold text-slate-800 list-none"
+                >
+                  <span class="group-open:text-slate-900">
+                    What do I get with each order?
+                  </span>
+                  <span class="flex items-center">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-slate-400 group-open:border-primary group-open:bg-primary/10 group-open:text-primary transition-colors"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[15px] group-open:hidden"
+                      >
+                        add
+                      </span>
+                      <span
+                        class="material-symbols-outlined text-[15px] hidden group-open:inline"
+                      >
+                        remove
+                      </span>
+                    </span>
+                  </span>
+                </summary>
+                <div class="faq-content pt-2 pb-3 text-sm text-slate-600">
+                  One professionally edited video based on the plan you choose (Basic,
+                  Pro or Elite), plus the revision rounds and add-ons you select for that
+                  order.
+                </div>
+              </details>
+
+              <details
+                class="group border-b border-slate-200 py-3 hover:bg-white/70 hover:-mx-4 hover:px-4 open:bg-white open:rounded-2xl open:shadow-lg open:px-4 open:-mx-4 open:border-primary/30 open:ring-1 open:ring-primary/20 transition-all"
+              >
+                <summary
+                  class="flex items-center justify-between cursor-pointer text-sm md:text-base font-semibold text-slate-800 list-none"
+                >
+                  <span class="group-open:text-slate-900">
+                    How are editors assigned?
+                  </span>
+                  <span class="flex items-center">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-slate-400 group-open:border-primary group-open:bg-primary/10 group-open:text-primary transition-colors"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[15px] group-open:hidden"
+                      >
+                        add
+                      </span>
+                      <span
+                        class="material-symbols-outlined text-[15px] hidden group-open:inline"
+                      >
+                        remove
+                      </span>
+                    </span>
+                  </span>
+                </summary>
+                <div class="faq-content pt-2 pb-3 text-sm text-slate-600">
+                  In Phase 1, an admin manually assigns each order to a vetted editor
+                  based on content type, plan and deadline so workloads stay balanced and
+                  quality stays consistent.
+                </div>
+              </details>
+
+              <details
+                class="group border-b border-slate-200 py-3 hover:bg-white/70 hover:-mx-4 hover:px-4 open:bg-white open:rounded-2xl open:shadow-lg open:px-4 open:-mx-4 open:border-primary/30 open:ring-1 open:ring-primary/20 transition-all"
+              >
+                <summary
+                  class="flex items-center justify-between cursor-pointer text-sm md:text-base font-semibold text-slate-800 list-none"
+                >
+                  <span class="group-open:text-slate-900">
+                    Can I talk directly to my editor?
+                  </span>
+                  <span class="flex items-center">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-slate-400 group-open:border-primary group-open:bg-primary/10 group-open:text-primary transition-colors"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[15px] group-open:hidden"
+                      >
+                        add
+                      </span>
+                      <span
+                        class="material-symbols-outlined text-[15px] hidden group-open:inline"
+                      >
+                        remove
+                      </span>
+                    </span>
+                  </span>
+                </summary>
+                <div class="faq-content pt-2 pb-3 text-sm text-slate-600">
+                  No. All communication is via text on the platform. This keeps scopes
+                  clear, protects your time and creates a transparent history of every
+                  request and change.
+                </div>
+              </details>
+
+              <details
+                class="group border-b border-slate-200 py-3 hover:bg-white/70 hover:-mx-4 hover:px-4 open:bg-white open:rounded-2xl open:shadow-lg open:px-4 open:-mx-4 open:border-primary/30 open:ring-1 open:ring-primary/20 transition-all"
+              >
+                <summary
+                  class="flex items-center justify-between cursor-pointer text-sm md:text-base font-semibold text-slate-800 list-none"
+                >
+                  <span class="group-open:text-slate-900">
+                    How do refunds and revisions work?
+                  </span>
+                  <span class="flex items-center">
+                    <span
+                      class="flex h-7 w-7 items-center justify-center rounded-full border border-slate-300 text-slate-400 group-open:border-primary group-open:bg-primary/10 group-open:text-primary transition-colors"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[15px] group-open:hidden"
+                      >
+                        add
+                      </span>
+                      <span
+                        class="material-symbols-outlined text-[15px] hidden group-open:inline"
+                      >
+                        remove
+                      </span>
+                    </span>
+                  </span>
+                </summary>
+                <div class="faq-content pt-2 pb-3 text-sm text-slate-600">
+                  Refunds are only available before editing starts. After that, you use
+                  the built-in revision rounds from your plan or add extra revisions as
+                  paid add-ons.
+                </div>
+              </details>
+
+              <div class="flex justify-center items-center gap-3 pt-4">
+                <button
+                  class="h-7 w-7 rounded-full gold-gradient text-[11px] font-semibold text-slate-900 flex items-center justify-center shadow-md shadow-primary/30"
+                >
+                  1
+                </button>
+                <button
+                  class="h-7 w-7 rounded-full border border-slate-300 bg-white/70 text-[11px] text-slate-500 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                >
+                  2
+                </button>
+                <button
+                  class="h-7 w-7 rounded-full border border-slate-300 bg-white/70 text-[11px] text-slate-500 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                >
+                  3
+                </button>
+                <button
+                  class="h-7 w-7 rounded-full border border-slate-300 bg-white/70 text-[11px] text-slate-500 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                >
+                  4
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-6">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500"
+      >
+        <div>© EditCraft. Managed editing marketplace – Volume Phase.</div>
+        <div class="flex items-center gap-4">
+          <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+          <a href="#services" class="hover:text-primary transition-colors">Services</a>
+          <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="schedulerModal"
+      class="fixed inset-0 z-50 hidden"
+      aria-hidden="true"
+    >
+      <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"></div>
+      <div
+        class="relative mx-auto my-8 w-[92%] max-w-4xl rounded-2xl bg-white shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">support_agent</span>
+            <h3 class="text-lg font-bold text-slate-900">Talk To An Advisor</h3>
+          </div>
+          <button id="schedulerClose" class="p-2 rounded-full hover:bg-slate-100">
+            <span class="material-symbols-outlined text-slate-500">close</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div id="ec-left-info" class="hidden md:block border-r border-slate-100 p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-primary">workspace_premium</span>
+              <div class="font-semibold">EditCraft Consultation</div>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              A quick 10 minute call to understand your requirements and recommend the right plan.
+            </p>
+          </div>
+          <!-- Step 1: Select date/time -->
+          <div id="ec-step-select" class="col-span-1 md:col-span-2 p-6">
+            <div>
+              <div id="ec-date-list" class="flex flex-wrap gap-2"></div>
+            </div>
+            <div id="ec-tz-wrap" class="mt-3 flex items-center gap-2 hidden">
+              <span class="material-symbols-outlined text-slate-500">language</span>
+              <select id="ec-timezone" class="border border-slate-200 rounded-lg px-2 py-1 text-sm">
+                <option value="local">Auto (Local)</option>
+                <option value="Asia/Kolkata">Asia/Kolkata</option>
+                <option value="America/New_York">America/New_York</option>
+                <option value="Europe/London">Europe/London</option>
+                <option value="Asia/Singapore">Asia/Singapore</option>
+              </select>
+            </div>
+            <div id="ec-time-sections" class="hidden">
+              <div class="mt-4">
+                <div class="text-xs uppercase tracking-wider text-slate-500 mb-2">Morning</div>
+                <div id="ec-morning" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div class="mt-4">
+                <div class="text-xs uppercase tracking-wider text-slate-500 mb-2">Afternoon</div>
+                <div id="ec-afternoon" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div class="mt-4">
+                <div class="text-xs uppercase tracking-wider text-slate-500 mb-2">Evening</div>
+                <div id="ec-evening" class="flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+              <div id="ec-status" class="text-xs text-slate-500"></div>
+              <button
+                id="ec-proceed"
+                disabled
+                class="inline-flex items-center gap-2 bg-slate-900 text-amber-100 px-5 py-2 rounded-lg text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span>Proceed</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+          <!-- Step 2: Confirm details -->
+          <div id="ec-step-confirm" class="col-span-1 md:col-span-3 px-6 pt-0 pb-6 hidden">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
+              <div class="md:col-span-1">
+                <div class="rounded-2xl border border-slate-100 bg-emerald-50/50 p-5 md:p-6">
+                  <div class="flex items-center justify-between mb-3">
+                    <div class="font-semibold text-slate-800">EditCraft Consultation</div>
+                    <button id="ec-edit" class="text-xs text-primary hover:underline">Edit</button>
+                  </div>
+                  <div class="flex items-center gap-2 text-slate-600 text-sm mb-2">
+                    <span class="material-symbols-outlined text-slate-500">schedule</span>
+                    <span id="ec-summary-tz">Timezone</span>
+                  </div>
+                  <div class="text-slate-700 text-sm mb-2" id="ec-summary-date">Tuesday, February 24, 2026</div>
+                  <div class="flex items-center gap-2 text-xl md:text-2xl font-bold text-slate-900" id="ec-summary-range">
+                    11:00 AM <span class="material-symbols-outlined text-slate-400 text-xl">arrow_forward</span> 11:30 AM
+                  </div>
+                  <div class="mt-4 md:mt-5">
+                    <img alt="Advisor" class="rounded-xl w-full object-cover aspect-video" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=600&h=360&fit=crop" />
+                  </div>
+                </div>
+              </div>
+              <div class="md:col-span-2">
+                <h3 class="text-center md:text-left text-slate-700 font-semibold mt-0 mb-3 md:mb-4 leading-snug">
+                  Please fill these details to confirm booking
+                </h3>
+                <div class="grid md:grid-cols-2 gap-3 md:gap-4">
+                  <input id="ec-name2" type="text" placeholder="Name" class="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm" />
+                  <input id="ec-email2" type="email" placeholder="Email" class="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm" />
+                </div>
+                <div class="mt-3 md:mt-4">
+                  <input id="ec-phone" type="tel" placeholder="+91 Phone Number" class="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm" />
+                </div>
+                <div class="mt-3 md:mt-4 p-3 rounded-lg bg-slate-50 border border-slate-100 text-slate-600 text-sm flex items-start gap-2">
+                  <span class="material-symbols-outlined text-emerald-600">verified_user</span>
+                  <span>We promise a strictly spam‑free service. We will not call you unless you ask us to do so.</span>
+                </div>
+                <div class="mt-3 md:mt-4">
+                  <input id="ec-source" type="text" placeholder="How did you hear about EditCraft?" class="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm" />
+                </div>
+                <div class="mt-3 md:mt-4">
+                  <textarea id="ec-notes" rows="3" placeholder="Briefly describe your query so we can match the right editor" class="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm"></textarea>
+                </div>
+                <div class="mt-4 md:mt-5 flex items-center gap-2">
+                  <input id="ec-human" type="checkbox" class="h-4 w-4 accent-slate-900" />
+                  <label for="ec-human" class="text-sm text-slate-700">Verify you are human</label>
+                </div>
+                <div class="mt-4 md:mt-6 flex items-center justify-end">
+                  <button
+                    id="ec-confirm2"
+                    disabled
+                    class="inline-flex items-center gap-2 bg-slate-900 text-amber-100 px-5 py-2 rounded-lg text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <span>Confirm</span>
+                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.EDITCRAFT_FIREBASE_CONFIG = {
+        apiKey: "AIzaSyDf_S9x3JS9oAvlcQkhkkIh5mTgGdPH5rE",
+        authDomain: "editcraft-324d7.firebaseapp.com",
+        projectId: "editcraft-324d7",
+        storageBucket: "editcraft-324d7.firebasestorage.app",
+        messagingSenderId: "120094892959",
+        appId: "1:120094892959:web:1aa4e39b3fc97dae4753aa",
+        measurementId: "G-ZN6E32QLML"
+      };
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script>
+      const faqDetails = document.querySelectorAll("#faq details");
+      faqDetails.forEach(function (detail) {
+        detail.addEventListener("toggle", function () {
+          if (!detail.open) {
+            return;
+          }
+          faqDetails.forEach(function (other) {
+            if (other !== detail) {
+              other.open = false;
+            }
+          });
+        });
+      });
+
+      (function () {
+        const nav = document.querySelector("nav");
+        if (!nav) {
+          return;
+        }
+
+        let lastScrollY =
+          window.pageYOffset || document.documentElement.scrollTop || 0;
+        let ticking = false;
+
+        function updateNavVisibility() {
+          const currentY =
+            window.pageYOffset || document.documentElement.scrollTop || 0;
+
+          if (Math.abs(currentY - lastScrollY) < 4) {
+            ticking = false;
+            return;
+          }
+
+          if (currentY > lastScrollY && currentY > 80) {
+            nav.classList.add("nav-hidden");
+          } else {
+            nav.classList.remove("nav-hidden");
+          }
+
+          lastScrollY = currentY;
+          ticking = false;
+        }
+
+        window.addEventListener("scroll", function () {
+          if (!ticking) {
+            window.requestAnimationFrame(updateNavVisibility);
+            ticking = true;
+          }
+        });
+      })();
+      (function () {
+        const btns = [document.getElementById("bookCallCta"), document.getElementById("bookCallHero"), document.getElementById("bookCallInline")].filter(Boolean);
+        const modal = document.getElementById("schedulerModal");
+        const closeBtn = document.getElementById("schedulerClose");
+        const overlay = modal ? modal.firstElementChild : null;
+        const stepSelect = document.getElementById("ec-step-select");
+        const stepConfirm = document.getElementById("ec-step-confirm");
+        const leftInfo = document.getElementById("ec-left-info");
+        const proceedBtn = document.getElementById("ec-proceed");
+        const tzWrap = document.getElementById("ec-tz-wrap");
+        const timeSections = document.getElementById("ec-time-sections");
+        const editBtn = document.getElementById("ec-edit");
+        const human = document.getElementById("ec-human");
+        const confirm2 = document.getElementById("ec-confirm2");
+        const statusEl = document.getElementById("ec-status");
+
+        function showSelect() {
+          stepSelect.classList.remove("hidden");
+          stepConfirm.classList.add("hidden");
+          if (leftInfo) {
+            leftInfo.classList.remove("hidden","md:hidden");
+            leftInfo.classList.add("md:block");
+          }
+        }
+        function showConfirm() {
+          stepSelect.classList.add("hidden");
+          stepConfirm.classList.remove("hidden");
+          if (leftInfo) {
+            leftInfo.classList.add("hidden","md:hidden");
+            leftInfo.classList.remove("md:block");
+          }
+          updateSummary();
+        }
+        function open() {
+          if (modal) modal.classList.remove("hidden");
+          showSelect();
+          buildDates();
+          prefillTimezone();
+          selectedDate = null;
+          selectedTime = null;
+          proceedBtn.disabled = true;
+          statusEl.textContent = "";
+          human.checked = false;
+          updateConfirmEnabled();
+          document.getElementById("ec-name2").value = "";
+          document.getElementById("ec-email2").value = "";
+          document.getElementById("ec-phone").value = "";
+          document.getElementById("ec-source").value = "";
+          document.getElementById("ec-notes").value = "";
+          if (tzWrap) tzWrap.classList.add("hidden");
+          if (timeSections) timeSections.classList.add("hidden");
+          startTick();
+        }
+        function close() {
+          if (modal) modal.classList.add("hidden");
+          stopTick();
+        }
+        btns.forEach(b => b && b.addEventListener("click", open));
+        if (closeBtn) closeBtn.addEventListener("click", close);
+        if (overlay) overlay.addEventListener("click", close);
+        if (editBtn) editBtn.addEventListener("click", showSelect);
+
+        const morning = ["11:00 AM","11:30 AM"];
+        const afternoon = ["12:00 PM","12:30 PM","01:00 PM","01:30 PM","02:00 PM","02:30 PM","03:00 PM","03:30 PM","04:00 PM","04:30 PM"];
+        const evening = ["05:00 PM","05:30 PM","06:00 PM","06:30 PM","07:00 PM","07:30 PM"];
+        let selectedDate = null;
+        let selectedTime = null;
+        let tickId = null;
+        let lockedSlots = new Set();
+
+        function getTodayStart() {
+          const now = new Date();
+          return new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+        }
+        function getLastLabel() {
+          if (evening.length) return evening[evening.length-1];
+          if (afternoon.length) return afternoon[afternoon.length-1];
+          if (morning.length) return morning[morning.length-1];
+          return "11:59 PM";
+        }
+        function computeStartOffset() {
+          const todayStart = getTodayStart();
+          const now = new Date();
+          const lastEndToday = addMinutes(parseTimeOnDate(todayStart, getLastLabel()), 10);
+          return now >= lastEndToday ? 1 : 0;
+        }
+        function buildDates() {
+          const wrap = document.getElementById("ec-date-list");
+          if (!wrap) return;
+          wrap.innerHTML = "";
+          const today = getTodayStart();
+          const offset = computeStartOffset();
+          for (let i=0; i<7; i++) {
+            const d = new Date(today);
+            d.setDate(today.getDate()+offset+i);
+            const isToday = i===0;
+            const day = d.toLocaleDateString(undefined, {weekday:"short"});
+            const dateNum = d.getDate();
+            const ymd = d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "px-3 py-2 rounded-xl border border-slate-200 text-sm bg-white hover:bg-slate-50 min-w-[72px]";
+            btn.dataset.ymd = ymd;
+            btn.innerHTML = "<div class='text-[10px] uppercase tracking-wider "+(isToday?"text-primary":"text-slate-500")+"'>"+(isToday?"Today":day)+"</div><div class='text-slate-900 font-semibold'>"+dateNum+"</div>";
+            btn.addEventListener("click", function(){
+              const [Y,M,D] = this.dataset.ymd.split("-").map(Number);
+              selectedDate = new Date(Y, M-1, D, 0, 0, 0, 0); // local midnight
+              Array.from(wrap.children).forEach(c=>c.classList.remove("ring-2","ring-primary"));
+              this.classList.add("ring-2","ring-primary");
+              if (tzWrap) tzWrap.classList.remove("hidden");
+              if (timeSections) timeSections.classList.remove("hidden");
+              fetchLocksForSelected().then(()=>{
+                renderSlots();
+                updateProceedEnabled();
+              });
+            });
+            wrap.appendChild(btn);
+          }
+          // If previously selected day is no longer visible, clear selection
+          if (selectedDate && selectedDate < today) {
+            selectedDate = null;
+            selectedTime = null;
+            if (timeSections) timeSections.classList.add("hidden");
+            proceedBtn.disabled = true;
+          }
+        }
+        function ymdFromDate(d) {
+          return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+        }
+        async function fetchLocksForSelected() {
+          lockedSlots = new Set();
+          if (!db || !selectedDate) return;
+          const tzSel = document.getElementById("ec-timezone");
+          const tz = tzSel && tzSel.value==="local" ? (Intl.DateTimeFormat().resolvedOptions().timeZone || "local") : (tzSel ? tzSel.value : "local");
+          const ymd = ymdFromDate(selectedDate);
+          try {
+            const snap = await db.collection("slotLocks").where("date","==", ymd).get();
+            snap.forEach(doc=>{
+              const data = doc.data()||{};
+              if (data.tz === tz && data.slotLabel) {
+                lockedSlots.add(data.slotLabel);
+              }
+            });
+          } catch (e) {
+            console.error("lock fetch error", e);
+          }
+        }
+        function sameDay(a,b) {
+          return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate();
+        }
+        function slotDisabled(label) {
+          if (!selectedDate) return false;
+          const now = new Date();
+          if (!sameDay(selectedDate, now)) return false;
+          const start = parseTimeOnDate(selectedDate, label);
+          if (start <= now) return true;
+          if (lockedSlots && lockedSlots.has(label)) return true;
+          return false;
+        }
+        function makeSlotBtn(label) {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.textContent = label;
+          const disabled = slotDisabled(label);
+          b.className = disabled ? "px-3 py-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-400 text-sm cursor-not-allowed opacity-60" : "px-3 py-2 rounded-lg bg-white border border-slate-200 text-slate-900 text-sm hover:bg-slate-50";
+          if (disabled) b.disabled = true;
+          b.addEventListener("click", function(){
+            if (disabled) return;
+            selectedTime = label;
+            document.querySelectorAll("#ec-morning button, #ec-afternoon button, #ec-evening button").forEach(x=>x.classList.remove("ring-2","ring-primary"));
+            this.classList.add("ring-2","ring-primary");
+            updateProceedEnabled();
+          });
+          return b;
+        }
+        function renderSlots() {
+          const m = document.getElementById("ec-morning");
+          const a = document.getElementById("ec-afternoon");
+          const e = document.getElementById("ec-evening");
+          if (!m || !a || !e) return;
+          m.innerHTML = "";
+          a.innerHTML = "";
+          e.innerHTML = "";
+          morning.forEach(t=>m.appendChild(makeSlotBtn(t)));
+          afternoon.forEach(t=>a.appendChild(makeSlotBtn(t)));
+          evening.forEach(t=>e.appendChild(makeSlotBtn(t)));
+          if (selectedTime && slotDisabled(selectedTime)) {
+            selectedTime = null;
+          }
+        }
+        function prefillTimezone() {
+          const tzSel = document.getElementById("ec-timezone");
+          if (!tzSel) return;
+          const local = Intl.DateTimeFormat().resolvedOptions().timeZone || "local";
+          if ([...tzSel.options].some(o=>o.value===local)) tzSel.value = local; else tzSel.value = "local";
+          tzSel.addEventListener("change", async function(){
+            if (!selectedDate) return;
+            await fetchLocksForSelected();
+            renderSlots();
+            updateProceedEnabled();
+          });
+        }
+        function updateProceedEnabled() {
+          proceedBtn.disabled = !(selectedDate && selectedTime);
+        }
+        if (proceedBtn) {
+          proceedBtn.addEventListener("click", function(){
+            if (!(selectedDate && selectedTime)) return;
+            showConfirm();
+          });
+        }
+        function formatLongDate(d) {
+          return d.toLocaleDateString(undefined, {weekday:"long", year:"numeric", month:"long", day:"numeric"});
+        }
+        function parseTimeOnDate(dateObj, label) {
+          // label like "11:00 AM"
+          const [time, ampm] = label.split(" ");
+          let [hh, mm] = time.split(":").map(Number);
+          if (ampm.toUpperCase()==="PM" && hh !== 12) hh += 12;
+          if (ampm.toUpperCase()==="AM" && hh === 12) hh = 0;
+          const d = new Date(dateObj);
+          d.setHours(hh, mm || 0, 0, 0);
+          return d;
+        }
+        function addMinutes(d, minutes) {
+          return new Date(d.getTime() + minutes*60000);
+        }
+        function formatTime(d) {
+          return d.toLocaleTimeString(undefined, {hour:"2-digit", minute:"2-digit"}).replace(/^0/, "");
+        }
+        function updateSummary() {
+          const tzSel = document.getElementById("ec-timezone");
+          const tz = tzSel.value==="local" ? (Intl.DateTimeFormat().resolvedOptions().timeZone || "Local") : tzSel.value;
+          document.getElementById("ec-summary-tz").textContent = tz;
+          document.getElementById("ec-summary-date").textContent = formatLongDate(selectedDate);
+          const start = parseTimeOnDate(selectedDate, selectedTime);
+          const end = addMinutes(start, 10);
+          document.getElementById("ec-summary-range").innerHTML =
+            formatTime(start) + " <span class='material-symbols-outlined text-slate-400 text-xl'>arrow_forward</span> " + formatTime(end);
+        }
+
+        const FIREBASE_CONFIG = window.EDITCRAFT_FIREBASE_CONFIG || {apiKey:"YOUR_FIREBASE_API_KEY",authDomain:"YOUR_FIREBASE_AUTH_DOMAIN",projectId:"YOUR_FIREBASE_PROJECT_ID"};
+        let db = null;
+        try {
+          if (firebase && FIREBASE_CONFIG && FIREBASE_CONFIG.apiKey && !FIREBASE_CONFIG.apiKey.includes("YOUR_FIREBASE")) {
+            firebase.initializeApp(FIREBASE_CONFIG);
+            db = firebase.firestore();
+          }
+        } catch (e) {
+          console.error("Firebase init error", e);
+        }
+        function updateConfirmEnabled() {
+          const ok =
+            document.getElementById("ec-name2").value.trim() &&
+            document.getElementById("ec-email2").value.trim() &&
+            document.getElementById("ec-phone").value.trim() &&
+            human.checked;
+          confirm2.disabled = !ok;
+        }
+        ["ec-name2","ec-email2","ec-phone","ec-source","ec-notes"].forEach(id=>{
+          const el = document.getElementById(id);
+          if (el) el.addEventListener("input", updateConfirmEnabled);
+        });
+        if (human) human.addEventListener("change", updateConfirmEnabled);
+
+        function lockDocId(ymd, tz, label) {
+          const norm = s => String(s).replace(/[^A-Za-z0-9_-]/g,"_");
+          return norm(ymd)+"__"+norm(tz)+"__"+norm(label);
+        }
+        if (confirm2) {
+          confirm2.addEventListener("click", async function(){
+            if (!(selectedDate && selectedTime)) return;
+            const tzSel = document.getElementById("ec-timezone");
+            const tz = tzSel.value==="local" ? (Intl.DateTimeFormat().resolvedOptions().timeZone || "local") : tzSel.value;
+            const start = parseTimeOnDate(selectedDate, selectedTime);
+            const end = addMinutes(start, 10);
+            const ymd = ymdFromDate(selectedDate);
+            const payload = {
+              name: document.getElementById("ec-name2").value.trim(),
+              email: document.getElementById("ec-email2").value.trim(),
+              phone: document.getElementById("ec-phone").value.trim(),
+              source: document.getElementById("ec-source").value.trim(),
+              notes: document.getElementById("ec-notes").value.trim(),
+              timezone: tz,
+              dateISO: new Date(selectedDate).toISOString(),
+              startISO: start.toISOString(),
+              endISO: end.toISOString(),
+              slotLabel: selectedTime,
+              createdAt: new Date().toISOString()
+            };
+            statusEl.textContent = "Saving...";
+            try {
+              if (db) {
+                const lockId = lockDocId(ymd, tz, selectedTime);
+                await db.runTransaction(async (tx)=>{
+                  const lockRef = db.collection("slotLocks").doc(lockId);
+                  const lockSnap = await tx.get(lockRef);
+                  if (lockSnap.exists) {
+                    throw new Error("Selected slot is no longer available");
+                  }
+                  tx.set(lockRef, {
+                    date: ymd,
+                    tz,
+                    slotLabel: selectedTime,
+                    startISO: start.toISOString(),
+                    createdAt: new Date().toISOString()
+                  });
+                  const bookingRef = db.collection("bookings").doc();
+                  tx.set(bookingRef, payload);
+                });
+                lockedSlots.add(selectedTime);
+                renderSlots();
+                statusEl.textContent = "Scheduled. We will reach out shortly.";
+              } else {
+                statusEl.textContent = "Saved locally. Provide Firebase config to enable cloud save.";
+                console.log("Booking", payload);
+              }
+              setTimeout(close, 1200);
+            } catch (e) {
+              if (String(e&&e.message||"").toLowerCase().includes("no longer available") || String(e).includes("ALREADY_EXISTS")) {
+                statusEl.textContent = "That slot was just taken. Please choose another.";
+                await fetchLocksForSelected();
+                renderSlots();
+              } else {
+                statusEl.textContent = "Unable to save right now. Please try later.";
+              }
+              console.error(e);
+            }
+          });
+        }
+        function startTick() {
+          if (tickId) clearInterval(tickId);
+          tickId = setInterval(function(){
+            // If we crossed the day's last slot, rebuild days so past day disappears
+            const offsetNow = computeStartOffset();
+            const todayStart = getTodayStart();
+            const lastEndToday = addMinutes(parseTimeOnDate(todayStart, getLastLabel()), 10);
+            if (new Date() >= lastEndToday) {
+              buildDates();
+            }
+            if (selectedDate) {
+              fetchLocksForSelected().then(()=>renderSlots());
+            }
+            updateProceedEnabled();
+          }, 30000);
+        }
+        function stopTick() {
+          if (tickId) {
+            clearInterval(tickId);
+            tickId = null;
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
+
